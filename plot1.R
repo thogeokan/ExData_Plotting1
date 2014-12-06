@@ -1,5 +1,6 @@
 getwd()
 #setwd("Documents/Programming/R/exploratory")
+#Sys.setlocale("LC_TIME", 'en_GB.UTF-8')
 
 library(dplyr)
 library(lubridate)
@@ -19,7 +20,8 @@ GAP <- surv %>%
 
 # converted to numeric, so we can use the values for our histogram
 GAP_con <- as.numeric(as.character(GAP$Global_active_power))
-
+par(mfcol=c(1,1))
+par(mar = c(5.1, 5.1, 4.1, 2.1))
 hist(GAP_con, 
      breaks = 12, 
      col    = "red",  
@@ -32,7 +34,7 @@ hist(GAP_con,
 par(cex.lab = 1.20)
 par(cex.axis = 0.70)
 
-par(mar = c(5.1, 5.1, 4.1, 2.1))
+
 
 #draw the axis
 axis(side=1, at=seq(0, 6, by=2))

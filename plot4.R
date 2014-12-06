@@ -29,6 +29,10 @@ GAP <- surv %>%
 par(mfcol=c(2,2))
 par(mar = c(4, 4, 2, 2))
 
+# setting the size of the labels and the annotation
+par(cex.lab = 0.90)
+par(cex.axis = 0.70)
+
 plot(GAP$DateTime, GAP$Sub_metering_1, 
      type   = "l",
      ylab   = "Energy sub metering", 
